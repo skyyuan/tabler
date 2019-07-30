@@ -1,4 +1,4 @@
-# Tabler
+# Core
 [![Backers on Open Collective](https://opencollective.com/tabler/backers/badge.svg)](#backers)
  [![Sponsors on Open Collective](https://opencollective.com/tabler/sponsors/badge.svg)](#sponsors)
 
@@ -6,7 +6,7 @@ Premium and Open Source dashboard template with responsive and high-quality UI.
 
 <strong><a href="https://tabler.github.io/demo/">View Demo</a> | <a href="https://github.com/tabler/tabler-react">View React Version</a> | <a href="https://github.com/tabler/tabler/archive/master.zip">Download ZIP</a> | <a href="https://goo.gl/zJP2dT">Join us on Slack</a></strong>
 
-![Tabler preview](https://tabler.github.io/img/dashboard-preview.png)
+![Core preview](https://tabler.github.io/img/dashboard-preview.png)
 
 ## Status
 
@@ -16,16 +16,16 @@ Premium and Open Source dashboard template with responsive and high-quality UI.
 
 We created this admin panel for everyone who wants to create any templates based on our pre-made components. Our mission is to deliver a user-friendly, clear and easy administration panel, that can be used by both, simple websites and sophisticated systems. The only requirement is a basic HTML and CSS knowledge—as a reward, you'll be able to manage and visualize different types of data in the easiest possible way!
 
-* **Responsive:** With support for mobile, tablet and desktop it doesn’t matter what device you’re using. Tabler is responsive in all major browsers.
+* **Responsive:** With support for mobile, tablet and desktop it doesn’t matter what device you’re using. Core is responsive in all major browsers.
 * **Cross Browser:** Our theme works perfectly with Latest Chrome, Firefox+, Latest Safari, Opera, Internet Explorer 10+ and mobile browsers. We work hard to continuously support them.
 * **HTML5 & CSS3:** We only use modern web technologies like HTML5 and CSS3. Our theme includes some subtle CSS3 animations so you will get anyone’s attention.
 * **Clean Code:** We strictly followed Bootstrap’s guidelines to make your integration as easy as possible. All code is handwritten and W3C valid.
-* **Demo pages**: Tabler features over 20 individual pages featuring various components, giving you the freedom to choose and combine. All components can take variation in color and styling that can easily be modified using Sass. The sky is the limit!
-* **Single Page Application versions:** [Tabler React](https://github.com/tabler/tabler-react) has React components for Tabler.
+* **Demo pages**: Core features over 20 individual pages featuring various components, giving you the freedom to choose and combine. All components can take variation in color and styling that can easily be modified using Sass. The sky is the limit!
+* **Single Page Application versions:** [Core React](https://github.com/tabler/tabler-react) has React components for Core.
 
 ## Setup environment
 
-To use our build system and run our documentation locally, you'll need a copy of Tabler's source files. Follow these steps:
+To use our build system and run our documentation locally, you'll need a copy of Core's source files. Follow these steps:
 
 1. [Install Node.js](https://nodejs.org/download/), which we use to manage our dependencies.
 2. Navigate to the root `/tabler` directory and run `npm install` to install our local dependencies listed in `package.json`.
@@ -94,4 +94,4 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 
 ## Copyright and license
 
-Code and documentation copyright 2018 the [Tabler Authors](https://github.com/tabler/tabler/graphs/contributors) and [codecalm.net](https://codecalm.net). Code released under the [MIT License](https://github.com/tabler/tabler/blob/master/LICENSE).
+Code and documentation copyright 2018 the [Core Authors](https://github.com/tabler/tabler/graphs/contributors) and [codecalm.net](https://codecalm.net). Code released under the [MIT License](https://github.com/tabler/tabler/blob/master/LICENSE).

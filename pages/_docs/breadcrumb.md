@@ -15,7 +15,7 @@ The dividers are automatically created in the content of the `::before` pseudo-e
 
 ### Breadcrumb variations
 
-You can add more variations by modify `$breadcrumb-variants` variable in Tabler config.
+You can add more variations by modify `$breadcrumb-variants` variable in Core config.
 
 {% example %}
 {% include ui/breadcrumb.html class="breadcrumb-dots" %}

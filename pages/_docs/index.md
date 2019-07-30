@@ -9,7 +9,7 @@ We’ve created this admin panel for everyone who wants to create any templates 
 
 ### Setup environment
 
-To use our build system and run our documentation locally, you'll need a copy of Tabler's source files. Follow these steps:
+To use our build system and run our documentation locally, you'll need a copy of Core's source files. Follow these steps:
 
 1. [Install Node.js](https://nodejs.org/download/), which we use to manage our dependencies.
 2. Navigate to the root `/tabler` directory and run `npm install` to install our local dependencies listed in `package.json`.
@@ -23,7 +23,7 @@ To use our build system and run our documentation locally, you'll need a copy of
   
 When completed, you'll be able to run the various commands provided from the command line.
 
-### Build Tabler locally
+### Build Core locally
 
 1. From the root `/tabler` directory, run `npm run start` in the command line.
 2. Open [http://localhost:4000](http://localhost:4000) in your browser, and voilà.

@@ -1,30 +1,30 @@
-const tabler = {
-  colorVariation: function(color, variation) {
+class Tabler {
+  static colorVariation(color, variation) {
     const colorValue = this.colors[color];
 
     if (colorValue) {
       switch (variation) {
-        case 'light':
-          return this.mixColors(colorValue, '#ffffff', 70);
-        case 'lighten':
-          return this.mixColors(colorValue, '#ffffff', 30);
-        case 'lightest':
-          return this.mixColors(colorValue, '#ffffff', 10);
-        case 'dark':
-          return this.mixColors(colorValue, '#000000', 80);
-        case 'darken':
-          return this.mixColors(colorValue, '#000000', 40);
-        case 'darkest':
-          return this.mixColors(colorValue, '#000000', 20);
+      case 'light':
+        return this.mixColors(colorValue, '#ffffff', 70);
+      case 'lighten':
+        return this.mixColors(colorValue, '#ffffff', 30);
+      case 'lightest':
+        return this.mixColors(colorValue, '#ffffff', 10);
+      case 'dark':
+        return this.mixColors(colorValue, '#000000', 80);
+      case 'darken':
+        return this.mixColors(colorValue, '#000000', 40);
+      case 'darkest':
+        return this.mixColors(colorValue, '#000000', 20);
       }
 
       return colorValue;
     }
 
     throw new Error('Wrong color: ' + color);
-  },
+  }
 
-  hexToRgbA: function(hex, opacity) {
+  static hexToRgbA(hex, opacity) {
     let c;
 
     opacity = opacity || 1;
@@ -38,9 +38,9 @@ const tabler = {
       return 'rgba(' + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',') + ',' + opacity + ')';
     }
     throw new Error('Bad Hex');
-  },
+  }
 
-  mixColors: function(color_1, color_2, weight) {
+  static mixColors(color_1, color_2, weight) {
     color_1 = color_1.substr(1);
     color_2 = color_2.substr(1);
 
@@ -70,9 +70,9 @@ const tabler = {
     }
 
     return color;
-  },
+  }
 
-  toggleFullscreen: function(elem) {
+  static toggleFullscreen(elem) {
     elem = elem || document.documentElement;
     if (
       !document.fullscreenElement &&
@@ -100,65 +100,67 @@ const tabler = {
         document.webkitExitFullscreen();
       }
     }
-  },
-};
-
-$(document).ready(function() {
-  const $body = $('body');
-
-  $body.on('click', '[data-toggle="sidebar"]', function(e) {
-    $body.toggleClass('sidebar-opened');
-
-    e.preventDefault();
-    return false;
-  });
-
-  $('[data-toggle="tooltip"]').tooltip();
-  $('[data-toggle="popover"]').popover();
-
-  /*
-  Autosize plugin
-   */
-  if (window.autosize) {
-    (function() {
-      const $elem = $('[data-toggle="autosize"]');
-
-      if ($elem) {
-        $elem.each(function() {
-          autosize($(this));
-        });
-      }
-    })();
   }
+}
 
-  /*
-  Imask plugin
-   */
-  if (window.IMask) {
-    (function() {
-      const $elem = $('[data-mask]');
+export default Tabler;
 
-      if ($elem) {
-        $elem.each(function() {
-          IMask($(this).get(0), {
-            mask: $(this).attr('data-mask'),
-            lazy: $(this).attr('data-mask-visible') === 'true',
-          });
-        });
-      }
-    })();
-  }
+// $(document).ready(function() {
+//   const $body = $('body');
+//
+//   $body.on('click', '[data-toggle="sidebar"]', function(e) {
+//     $body.toggleClass('sidebar-opened');
+//
+//     e.preventDefault();
+//     return false;
+//   });
+//
+//   $('[data-toggle="tooltip"]').tooltip();
+//   $('[data-toggle="popover"]').popover();
+//
+//   /*
+//   Autosize plugin
+//    */
+//   if (window.autosize) {
+//     (function() {
+//       const $elem = $('[data-toggle="autosize"]');
+//
+//       if ($elem) {
+//         $elem.each(function() {
+//           autosize($(this));
+//         });
+//       }
+//     })();
+//   }
+//
+//   /*
+//   Imask plugin
+//    */
+//   if (window.IMask) {
+//     (function() {
+//       const $elem = $('[data-mask]');
+//
+//       if ($elem) {
+//         $elem.each(function() {
+//           IMask($(this).get(0), {
+//             mask: $(this).attr('data-mask'),
+//             lazy: $(this).attr('data-mask-visible') === 'true',
+//           });
+//         });
+//       }
+//     })();
+//   }
+//
+//   /**
+//    * Seelectize plugin
+//    */
+//   if (jQuery && jQuery().selectize) {
+//     const $elem = $('[data-selectize]');
+//
+//     if ($elem) {
+//       $elem.selectize();
+//     }
+//   }
+// });
 
-  /**
-   * Seelectize plugin
-   */
-  if (jQuery && jQuery().selectize) {
-    const $elem = $('[data-selectize]');
 
-    if ($elem) {
-      $elem.selectize();
-    }
-  }
-});
-
-window.tabler = tabler;
